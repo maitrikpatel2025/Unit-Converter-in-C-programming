@@ -1,0 +1,418 @@
+start //Program_start
+  Function MainMenu
+End   //Program_end
+
+Function MainMenu
+	Print  Welcome To The Unit Converter 
+			Declare MainMenu
+	Print Converter Main Menu 
+	Print [1]-Temperature 
+	Print [2]-Mass 
+	Print [3]-Length 
+	Print [4]-Time 
+	Print [5]-Exit
+
+	Input Menu
+	 Case Of Menu
+	 	1: "Function TemperatureConversion"
+		2: "Function MassConversion"
+		3: "Function LengthConversion"
+		4: "Function TimeConversion"
+		5: "Function Exit_To_App"
+	 Other
+	 	Print input invalid
+	 		goto MainMenu
+	 Endcase
+End Function MainMenu
+
+Function TemperatureConversion
+           Declare Sub_Temp
+	Print SubMenu of Temperature
+	Print From
+	  Function SubMenu_of_Temperature
+	  		Print [1]-Celsius
+			Print [2]-Fahrenhit
+			Print [3]-Kelvin
+			Print [4]-Exit To MainMenu
+	  End Function SubMenu_of_Temperature
+	Input Choice
+	 Case Of Choice
+		1: "Temperature Celsius"
+			Input Celsius
+			Print To
+			  Function SubMenu_of_Temperature
+	  			Print [1]-Celsius
+				Print [2]-Fahrenhit
+				Print [3]-Kelvin
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Temperature
+	  		IF Input To Celsius
+	  				Celsius = Celsius
+	  				Print Celsius
+	  		ELSE IF Input To Fahrenhit
+	  			Function Celsius_To_Fahrenhit
+	  				Fahrenhit=((Celsius*9)/5)+32
+	  				Print Fahrenhit
+	  			End Function Celsius_To_Fahrenhit 
+	  		ELSE IF Input To Kelvin
+	  			Function Celsius_To_Kelvin
+	  				Kelvin=Celsius+273.15
+	  				Print Kelvin
+	  			End Function Celsius_To_Kelvin
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	  		
+		2: "Temperature Fahrenhit"
+			Input Fahrenhit
+			Print To
+			  Function SubMenu_of_Temperature
+	  			Print [1]-Celsius
+				Print [2]-Fahrenhit
+				Print [3]-Kelvin
+				Print [4]-Exit To MainMenu
+	  		IF Input To Celsius
+	  			Function Fahrenhit_To_Celsius
+	  				Celsius=(5*(Fahrenhit-32))/9
+	  				Print Celsius
+	  			End Function Fahrenhit_To_Celsius	  		
+	  		ELSE IF Input To Celsius
+	  				Fahrenhit = Fahrenhit
+	  				Print Fahrenhit
+	  		ELSE IF Input To Kelvin
+	  			Function Fahrenhit_To_Kelvin
+	  				Kelvin=((5*(Fahrenhit-32))/9)+273
+	  				Print Kelvin
+	  			End Function Fahrenhit_To_Kelvin
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid
+		3: "Temperature Kelvin"
+			Input Kelvin
+			Print To
+			  Function SubMenu_of_Temperature
+	  			Print [1]-Celsius
+				Print [2]-Fahrenhit
+				Print [3]-Kelvin
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Temperature
+	  		IF Input To Celsius
+	  			Function Kelvin_To_Celsius
+	  				Celsius=Kelvin-273
+	  				Print Celsius
+	  			End Function Kelvin_To_Celsius	  				
+	  		ELSE IF Input To Fahrenhit
+	  			Function Kelvin_To_Fahrenhit
+	  				Fahrenhit= (9*(Kelvin-273))/5+32
+	  				Print Fahrenhit
+	  			End Function Kelvin_To_Fahrenhit 
+	  		ELSE IF Input To Kelvin
+	  			    Kelvin = Kelvin
+	  				Print Kelvin
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	
+		4: "Exit To Main Menu"
+			 Return To Function MainMenu
+	 Other
+	 	Print input invalid
+	 		goto Sub_Temp
+	 Endcase
+End Function TemperatureConversion
+
+Function MassConversion
+           Declare Sub_Mass
+	Print SubMenu of Mass
+	Print From
+	  Function SubMenu_of_Mass
+	  		Print [1]-Pound
+			Print [2]-Kilogram
+			Print [3]-Ounce
+			Print [4]-Exit To MainMenu
+	  End Function SubMenu_of_Mass
+	Input Choice
+	 Case Of Choice
+		1: "Mass Pound"
+			Input Pound
+			Print To
+			  Function SubMenu_of_Mass
+	  			Print [1]-Pound
+				Print [2]-Kilogram
+				Print [3]-Ounce
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Mass
+	  		IF Input To Pound
+	  				Pound = Pound
+	  				Print Pound
+	  		ELSE IF Input To Kilogram
+	  			Function Pound_To_Kilogram
+	  				Kilogram=Pound*0.45359237
+	  				Print Kilogram
+	  			End Function Pound_To_Kilogram 
+	  		ELSE IF Input To Ounce
+	  			Function Pound_To_Ounce
+	  				Ounce=Pound*16
+	  				Print Ounce
+	  			End Function Pound_To_Ounce
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	  		
+		2: "Mass Kilogram"
+			Input Kilogram
+			Print To
+			  Function SubMenu_of_Mass
+	  			Print [1]-Pound
+				Print [2]-Kilogram
+				Print [3]-Ounce
+				Print [4]-Exit To MainMenu
+	  		IF Input To Pound
+	  			Function Kilogram_To_Pound
+	  				Pound=Kilogram/0.45359237
+	  				Print Pound
+	  			End Function Kilogram_To_Kilogram 	  		
+	  		ELSE IF Input To Pound
+	  				Kilogram = Kilogram
+	  				Print Kilogram
+	  		ELSE IF Input To Ounce
+	  			Function Kilogram_To_Ounce
+	  				Ounce=Kilogram/0.02834952
+	  				Print Ounce
+	  			End Function Kilogram_To_Ounce
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid
+		3: "Mass Ounce"
+			Input Ounce
+			Print To
+			  Function SubMenu_of_Mass
+	  			Print [1]-Pound
+				Print [2]-Kilogram
+				Print [3]-Ounce
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Mass
+	  		IF Input To Pound
+	  			Function Ounce_To_Pound
+	  				Pound=Ounce/16
+	  				Print Pound
+	  			End Function Pound_To_Kilogram	  				
+	  		ELSE IF Input To Kilogram
+	  			Function Ounce_To_Kilogram
+	  				Kilogram=Ounce*0.02834952
+	  				Print Kilogram
+	  			End Function Pound_To_Kilogram 
+	  		ELSE IF Input To Ounce
+	  			    Ounce = Ounce
+	  				Print Ounce
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	
+		4: "Exit To Main Menu"
+			 Return To Function MainMenu
+	 Other
+	 	Print input invalid
+	 		goto Sub_Mass
+	 Endcase
+End Function MassConversion
+
+Function LengthConversion
+           Declare Sub_Length
+	Print SubMenu of Length
+	Print From
+	  Function SubMenu_of_Length
+	  		Print [1]-Miles
+			Print [2]-Kilometer
+			Print [3]-Feet
+			Print [4]-Exit To MainMenu
+	  End Function SubMenu_of_Length
+	Input Choice
+	 Case Of Choice
+		1: "Length Miles"
+			Input Miles
+			Print To
+			  Function SubMenu_of_Length
+	  			Print [1]-Miles
+				Print [2]-Kilometer
+				Print [3]-Feet
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Length
+	  		IF Input To Miles
+	  				Miles = Miles
+	  				Print Miles
+	  		ELSE IF Input To Kilometer
+	  			Function Miles_To_Kilometer
+	  				Kilometer=Miles/0.62137
+	  				Print Kilometer
+	  			End Function Miles_To_Kilometer 
+	  		ELSE IF Input To Feet
+	  			Function Miles_To_Feet
+	  				Feet=Miles*5280
+	  				Print Feet
+	  			End Function Miles_To_Feet
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	  		
+		2: "Length Kilometer"
+			Input Kilometer
+			Print To
+			  Function SubMenu_of_Length
+	  			Print [1]-Miles
+				Print [2]-Kilometer
+				Print [3]-Feet
+				Print [4]-Exit To MainMenu
+	  		IF Input To Miles
+	  			Function Kilometer_To_Miles
+	  				Miles=Kilometer*0.62137
+	  				Print Miles
+	  			End Function Kilometer_To_Kilometer 	  		
+	  		ELSE IF Input To Miles
+	  				Kilometer = Kilometer
+	  				Print Kilometer
+	  		ELSE IF Input To Feet
+	  			Function Kilometer_To_Feet
+	  				Feet=Kilometer*3280.8
+	  				Print Feet
+	  			End Function Kilometer_To_Feet
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid
+		3: "Length Feet"
+			Input Feet
+			Print To
+			  Function SubMenu_of_Length
+	  			Print [1]-Miles
+				Print [2]-Kilometer
+				Print [3]-Feet
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Length
+	  		IF Input To Miles
+	  			Function Feet_To_Miles
+	  				Miles=Feet*0.00018939
+	  				Print Miles
+	  			End Function Miles_To_Kilometer	  				
+	  		ELSE IF Input To Kilometer
+	  			Function Feet_To_Kilometer
+	  				Kilometer=Feet/3280.8
+	  				Print Kilometer
+	  			End Function Miles_To_Kilometer 
+	  		ELSE IF Input To Feet
+	  			    Feet = Feet
+	  				Print Feet
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	
+		4: "Exit To Main Menu"
+			 Return To Function MainMenu
+	 Other
+	 	Print input invalid
+	 		goto Sub_Length
+	 Endcase
+End Function LengthConversion
+
+Function TimeConversion
+           Declare Sub_Time
+	Print SubMenu of Time
+	Print From
+	  Function SubMenu_of_Time
+	  		Print [1]-Hours
+			Print [2]-Minutes
+			Print [3]-Seconds
+			Print [4]-Exit To MainMenu
+	  End Function SubMenu_of_Time
+	Input Choice
+	 Case Of Choice
+		1: "Time Hours"
+			Input Hours
+			Print To
+			  Function SubMenu_of_Time
+	  			Print [1]-Hours
+				Print [2]-Minutes
+				Print [3]-Seconds
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Time
+	  		IF Input To Hours
+	  				Hours = Hours
+	  				Print Hours
+	  		ELSE IF Input To Minutes
+	  			Function Hours_To_Minutes
+	  				Minutes=Hours*60
+	  				Print Minutes
+	  			End Function Hours_To_Minutes 
+	  		ELSE IF Input To Seconds
+	  			Function Hours_To_Seconds
+	  				Seconds=Hours*3600
+	  				Print Seconds
+	  			End Function Hours_To_Seconds
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	  		
+		2: "Time Minutes"
+			Input Minutes
+			Print To
+			  Function SubMenu_of_Time
+	  			Print [1]-Hours
+				Print [2]-Minutes
+				Print [3]-Seconds
+				Print [4]-Exit To MainMenu
+	  		IF Input To Hours
+	  			Function Minutes_To_Hours
+	  				Hours=Minutes/60
+	  				Print Hours
+	  			End Function Minutes_To_Minutes 	  		
+	  		ELSE IF Input To Hours
+	  				Minutes = Minutes
+	  				Print Minutes
+	  		ELSE IF Input To Seconds
+	  			Function Minutes_To_Seconds
+	  				Seconds=Minutes*60
+	  				Print Seconds
+	  			End Function Minutes_To_Seconds
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid
+		3: "Time Seconds"
+			Input Seconds
+			Print To
+			  Function SubMenu_of_Time
+	  			Print [1]-Hours
+				Print [2]-Minutes
+				Print [3]-Seconds
+				Print [4]-Exit To MainMenu
+	  		  End Function SubMenu_of_Time
+	  		IF Input To Hours
+	  			Function Seconds_To_Hours
+	  				Hours=Seconds/3600
+	  				Print Hours
+	  			End Function Hours_To_Minutes	  				
+	  		ELSE IF Input To Minutes
+	  			Function Seconds_To_Minutes
+	  				Minutes=Seconds/60
+	  				Print Minutes
+	  			End Function Hours_To_Minutes 
+	  		ELSE IF Input To Seconds
+	  			    Seconds = Seconds
+	  				Print Seconds
+	  		ELSE IF Input To Exit To MainMen 
+	  			Return To Function MainMenu
+	  		ELSE
+	  			Print Input Invalid	
+		4: "Exit To Main Menu"
+			 Return To Function MainMenu
+	 Other
+	 	Print input invalid
+	 		goto Sub_Time
+	 Endcase
+End Function TimeConversion
+
+Function Exit_To_App
+  Exit
+End Function Exit_To_App
